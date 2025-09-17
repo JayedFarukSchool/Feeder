@@ -19,6 +19,15 @@ public class Feeder {
      */
     public void simulateOneDay(int numBirds)
     {
+        if (Math.random() < 0.05) currentFood = 0;
+        else
+        {
+            int eaten = (int) (Math.random()*41) + 10;
+            eaten *= numBirds;
+            currentFood -= eaten;
+
+        }
+        if (currentFood<0) currentFood=0;
     }
 
     /**
@@ -26,8 +35,13 @@ public class Feeder {
      * feeder in this simulation, as described in part (b) Preconditions:
      * numBirds > 0, numDays > 0
      */
-    public int simulateManyDays(int numBirds, int numDays) 
+    public int simulateManyDays(int numBirds, int numDays)
     {
+        int days = 0;
+        while (numDays > 0)
+        {
+            simulateOneDay(numBirds);
+        }
         return 0;
     }
 
