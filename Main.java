@@ -10,11 +10,12 @@ public class Main
         f.simulateOneDay(12);
         System.out.println(f.getCurrentFood());
 
-        Feeder f = new Feeder(1000);
+
+        f = new Feeder(1000);
         f.simulateOneDay(22);
         System.out.println(f.getCurrentFood());
 
-        Feeder f = new Feeder(100);
+        f = new Feeder(100);
         f.simulateOneDay(5);
         System.out.println(f.getCurrentFood());
 
